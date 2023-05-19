@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\TrainingController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('training', [TrainingController::class, 'index'])->name('training');
+Route::get('profile', [TrainingController::class, 'profile'])->name('profile');
+Route::get('contactus', [TrainingController::class, 'contactus'])->name('contactus');
+Route::get('blog', [TrainingController::class, 'blog'])->name('blog');
+Route::get('aboutus', [TrainingController::class, 'aboutus'])->name('aboutus');
